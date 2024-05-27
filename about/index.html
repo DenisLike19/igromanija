@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Видеогалерея</title>
+<style>
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    .video {
+        width: 100%;
+        height: auto;
+    }
+</style>
+</head>
+<body>
+<div class="gallery">
+    <video class="video" controls>
+        <source src="video1.mp4" type="video/mp4">
+    </video>
+    <video class="video" controls>
+        <source src="video2.mp4" type="video/mp4">
+    </video>
+    <video class="video" controls>
+        <source src="video3.mp4" type="video/mp4">
+    </video>
+    <video class="video" controls>
+        <source src="video3.mp4" type="video/mp4">
+    </video>
+    <video class="video" controls>
+        <source src="video3.mp4" type="video/mp4">
+    </video>
+    <video class="video" controls>
+        <source src="video3.mp4" type="video/mp4">
+    </video>
+    <video class="video" controls>
+        <source src="video3.mp4" type="video/mp4">
+    </video>
+    <video class="video" controls>
+        <source src="video3.mp4" type="video/mp4">
+    </video>
+    <video class="video" controls>
+        <source src="video3.mp4" type="video/mp4">
+    </video>
+</div>
+
+<script>
+    const videos = document.querySelectorAll('.video');
+    videos.forEach(video => {
+        video.addEventListener('click', function() {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
+    });
+</script>
+</body>
+</html>
